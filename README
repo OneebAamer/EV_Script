@@ -1,0 +1,1 @@
+The script requires a module called Openpyxl. This module isn't a standard python module and so must be installed externally through their website: https://openpyxl.readthedocs.io/en/stable/
