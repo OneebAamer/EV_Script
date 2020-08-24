@@ -42,7 +42,10 @@ def compare(vehicleArray):
                         pass
 #Announce the Winner using the data given.
 def winner(score_list,n):
-    wb = load_workbook(filename = 'results.xlsx')
+    try:
+        wb = load_workbook(filename = 'results.xlsx')
+    except:
+        wb = Workbook()
     ws = wb.active
     ws.cell(row = 14,column = 1).value = "Position:"
     ws.cell(row = 14,column = 2).value = "Name:"
@@ -64,7 +67,10 @@ def winner(score_list,n):
 #Draw results for visuals into a new document
 def results(vehicle_list):
     index = 1
-    wb = load_workbook(filename = 'results.xlsx')
+    try:
+        wb = load_workbook(filename = 'results.xlsx')
+    except:
+        wb = Workbook()
     ws = wb.active
     ws.cell(row = 1,column = 1).value = 'Name:'
     ws.cell(row = 1,column = 2).value = 'Time (Hours):'
